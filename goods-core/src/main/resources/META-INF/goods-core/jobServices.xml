@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+  <bean id="goods-core.testJob" class="com.king.demo.goods.corejob.TestJob" />
+
+
+
+  <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+    <property name="triggers">
+      <list>
+        <bean class="org.springframework.scheduling.quartz.CronTriggerBean">
+          <property name="jobDetail">
+            <bean
+              class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+              <property name="targetObject">
+                <ref bean="goods-core.testJob" />
+              </property>
+              <property name="targetMethod">
+                <value>run</value>
+              </property>
+              <property name="concurrent" value="false" />
+            </bean>
+          </property>
+          <property name="cronExpression" value="0/5 * * * * ? " />
+        </bean>
+
+      </list>
+    </property>
+  </bean>
+
+
+</beans>

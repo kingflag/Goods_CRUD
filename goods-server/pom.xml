@@ -29,9 +29,8 @@
       <artifactId>goods-rs</artifactId>
       <version>${project.version}</version>
     </dependency>
-    
 
-    
+
   </dependencies>
 <!--   
   <build>
@@ -46,5 +45,5 @@
     </plugins>
   </build> 
   -->
-
+<build></build>
 </project>

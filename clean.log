@@ -1,0 +1,463 @@
+Apache Maven 3.0.5 (r01de14724cdef164cd33c7c8c2fe155faf9602da; 2013-02-19 21:51:28+0800)
+Maven home: D:\WorkSoftware\JAVA\Maven\apache-maven-3.0.5
+Java version: 1.7.0_67, vendor: Oracle Corporation
+Java home: D:\WorkSoftware\JAVA\jdk1.7\jre
+Default locale: zh_CN, platform encoding: GBK
+OS name: "windows 7", version: "6.1", arch: "amd64", family: "windows"
+[INFO] Error stacktraces are turned on.
+[DEBUG] Reading global settings from D:\WorkSoftware\JAVA\Maven\apache-maven-3.0.5\conf\settings.xml
+[DEBUG] Reading user settings from C:\Users\wangguoqi\.m2\settings.xml
+[DEBUG] Using local repository at D:\WorkSoftware\JAVA\Maven\Maven\Repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10 for D:\WorkSoftware\JAVA\Maven\Maven\Repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project com.king.demo:goods:pom:0.0.1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project com.king.demo:goods-server:war:0.0.1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging war from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project com.king.demo:goods-core:jar:0.0.1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project com.king.demo:goods-rs:jar:0.0.1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project com.king.demo:goods-api:jar:0.0.1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] goods
+[INFO] goods-core
+[INFO] goods-api
+[INFO] goods-rs
+[INFO] goods-server
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: com.king.demo:goods:pom:0.0.1-SNAPSHOT
+[DEBUG] Tasks:   [clean]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: com.king.demo:goods-core:jar:0.0.1-SNAPSHOT
+[DEBUG] Tasks:   [clean]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: com.king.demo:goods-api:jar:0.0.1-SNAPSHOT
+[DEBUG] Tasks:   [clean]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: com.king.demo:goods-rs:jar:0.0.1-SNAPSHOT
+[DEBUG] Tasks:   [clean]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: com.king.demo:goods-server:war:0.0.1-SNAPSHOT
+[DEBUG] Tasks:   [clean]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building goods 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Using mirror nexus (http://hdm2repo/nexus/content/groups/public/) for apache.snapshots (http://repository.apache.org/snapshots).
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.king.demo:goods:0.0.1-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): []
+[DEBUG] Repositories (dependencies): [nexus (http://hdm2repo/nexus/content/groups/public/, releases)]
+[DEBUG] Repositories (plugins)     : [nexus (http://hdm2repo/nexus/content/groups/public/, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <followSymLinks default-value="false">${clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.reporting.outputDirectory}"/>
+  <skip default-value="false">${clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${clean.verbose}</verbose>
+</configuration>
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ goods ---
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.transfer < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.metadata < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.collection < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.version < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.artifact < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.spi < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.graph < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.impl < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.deployment < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.installation < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.resolution < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG] Populating class realm maven.api
+[DEBUG] Using mirror nexus (http://hdm2repo/nexus/content/groups/public/) for apache.snapshots (http://repository.apache.org/snapshots).
+[DEBUG] Using mirror nexus (http://hdm2repo/nexus/content/groups/public/) for apache.snapshots (http://repository.apache.org/snapshots).
+[DEBUG] Using mirror nexus (http://hdm2repo/nexus/content/groups/public/) for central (http://repo.maven.apache.org/maven2).
+[DEBUG] Using mirror nexus (http://hdm2repo/nexus/content/groups/public/) for apache.snapshots (http://people.apache.org/repo/m2-snapshot-repository).
+[DEBUG] Using mirror nexus (http://hdm2repo/nexus/content/groups/public/) for apache.snapshots (http://people.apache.org/repo/m2-snapshot-repository).
+[DEBUG] Using mirror nexus (http://hdm2repo/nexus/content/groups/public/) for central (http://repo.maven.apache.org/maven2).
+[DEBUG] org.apache.maven.plugins:maven-clean-plugin:jar:2.4.1:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:2.0.5:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.4.1
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.4.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.4.1
+[DEBUG]   Included: org.apache.maven.plugins:maven-clean-plugin:jar:2.4.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.5
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.4.1, parent: sun.misc.Launcher$AppClassLoader@3125fe1]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean' with basic configurator -->
+[DEBUG]   (f) directory = D:\WorkSpace\JAVAWorkSpace\goods\target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = D:\WorkSpace\JAVAWorkSpace\goods\target\classes
+[DEBUG]   (f) reportDirectory = D:\WorkSpace\JAVAWorkSpace\goods\target\site
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = D:\WorkSpace\JAVAWorkSpace\goods\target\test-classes
+[DEBUG] -- end configuration --
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\target
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\target\classes
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\target\test-classes
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\target\site
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building goods-core 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.king.demo:goods-core:0.0.1-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): []
+[DEBUG] Repositories (dependencies): [nexus (http://hdm2repo/nexus/content/groups/public/, releases)]
+[DEBUG] Repositories (plugins)     : [nexus (http://hdm2repo/nexus/content/groups/public/, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <followSymLinks default-value="false">${clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.reporting.outputDirectory}"/>
+  <skip default-value="false">${clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${clean.verbose}</verbose>
+</configuration>
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ goods-core ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.4.1, parent: sun.misc.Launcher$AppClassLoader@3125fe1]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean' with basic configurator -->
+[DEBUG]   (f) directory = D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes
+[DEBUG]   (f) reportDirectory = D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\site
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\test-classes
+[DEBUG] -- end configuration --
+[INFO] Deleting D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\test-classes
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\surefire
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\maven-archiver\pom.properties
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\maven-archiver
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\goods-core-0.0.1-SNAPSHOT.jar
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\generated-sources\annotations
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\generated-sources
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes\META-INF\goods-core\jobServices.xml
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes\META-INF\goods-core
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes\META-INF
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes\goods-core.xml
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes\com\king\demo\goods\corejob\TestJob.class
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes\com\king\demo\goods\corejob
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes\com\king\demo\goods
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes\com\king\demo
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes\com\king
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes\com
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\classes
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\test-classes
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\goods-core\target\site
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building goods-api 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.king.demo:goods-api:0.0.1-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): []
+[DEBUG] Repositories (dependencies): [nexus (http://hdm2repo/nexus/content/groups/public/, releases)]
+[DEBUG] Repositories (plugins)     : [nexus (http://hdm2repo/nexus/content/groups/public/, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <followSymLinks default-value="false">${clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.reporting.outputDirectory}"/>
+  <skip default-value="false">${clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${clean.verbose}</verbose>
+</configuration>
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ goods-api ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.4.1, parent: sun.misc.Launcher$AppClassLoader@3125fe1]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean' with basic configurator -->
+[DEBUG]   (f) directory = D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target\classes
+[DEBUG]   (f) reportDirectory = D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target\site
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target\test-classes
+[DEBUG] -- end configuration --
+[INFO] Deleting D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target\test-classes
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target\surefire
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target\maven-archiver\pom.properties
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target\maven-archiver
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target\goods-api-0.0.1-SNAPSHOT.jar
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target\classes
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target\classes
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target\test-classes
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\goods-api\target\site
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building goods-rs 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.king.demo:goods-rs:0.0.1-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): []
+[DEBUG] Repositories (dependencies): [nexus (http://hdm2repo/nexus/content/groups/public/, releases)]
+[DEBUG] Repositories (plugins)     : [nexus (http://hdm2repo/nexus/content/groups/public/, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <followSymLinks default-value="false">${clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.reporting.outputDirectory}"/>
+  <skip default-value="false">${clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${clean.verbose}</verbose>
+</configuration>
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ goods-rs ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.4.1, parent: sun.misc.Launcher$AppClassLoader@3125fe1]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean' with basic configurator -->
+[DEBUG]   (f) directory = D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target\classes
+[DEBUG]   (f) reportDirectory = D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target\site
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target\test-classes
+[DEBUG] -- end configuration --
+[INFO] Deleting D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target\test-classes
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target\surefire
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target\maven-archiver\pom.properties
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target\maven-archiver
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target\goods-rs-0.0.1-SNAPSHOT.jar
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target\classes
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target\classes
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target\test-classes
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\goods-rs\target\site
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building goods-server 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.king.demo:goods-server:0.0.1-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): []
+[DEBUG] Repositories (dependencies): [nexus (http://hdm2repo/nexus/content/groups/public/, releases)]
+[DEBUG] Repositories (plugins)     : [nexus (http://hdm2repo/nexus/content/groups/public/, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <followSymLinks default-value="false">${clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.reporting.outputDirectory}"/>
+  <skip default-value="false">${clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${clean.verbose}</verbose>
+</configuration>
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ goods-server ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.4.1, parent: sun.misc.Launcher$AppClassLoader@3125fe1]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean' with basic configurator -->
+[DEBUG]   (f) directory = D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\classes
+[DEBUG]   (f) reportDirectory = D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\site
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\test-classes
+[DEBUG] -- end configuration --
+[INFO] Deleting D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\test-classes
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\surefire
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\maven-archiver\pom.properties
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\maven-archiver
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\web.xml
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\spring-web-3.2.9.RELEASE.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\spring-tx-3.2.9.RELEASE.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\spring-orm-3.2.9.RELEASE.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\spring-jdbc-3.2.9.RELEASE.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\spring-expression-3.2.9.RELEASE.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\spring-core-3.2.9.RELEASE.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\spring-context-support-3.2.9.RELEASE.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\spring-context-3.2.9.RELEASE.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\spring-beans-3.2.9.RELEASE.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\spring-aop-3.2.9.RELEASE.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\slf4j-log4j12-1.6.4.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\slf4j-api-1.6.4.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\quartz-all-1.6.1.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\ojdbc14-10.2.0.1.0.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\log4j-1.2.16.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\goods-rs-0.0.1-SNAPSHOT.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\goods-core-0.0.1-SNAPSHOT.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\goods-api-0.0.1-SNAPSHOT.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\flexjson-3.3.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\commons-logging-1.1.3.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\commons-lang3-3.1.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\commons-collections-3.2.1.jar
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib\aopalliance-1.0.jar
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\lib
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\classes\main.xml
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\classes\log4j.properties
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\classes\goods-server.xml
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\classes\goods-server.properties
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF\classes
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\WEB-INF
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\META-INF\MANIFEST.MF
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\META-INF
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT\index.jsp
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\goods-server-0.0.1-SNAPSHOT
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\classes\main.xml
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\classes\log4j.properties
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\classes\goods-server.xml
+[INFO] Deleting file D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\classes\goods-server.properties
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\classes
+[INFO] Deleting directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\classes
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\test-classes
+[DEBUG] Skipping non-existing directory D:\WorkSpace\JAVAWorkSpace\goods\goods-server\target\site
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] goods ............................................. SUCCESS [0.122s]
+[INFO] goods-core ........................................ SUCCESS [0.014s]
+[INFO] goods-api ......................................... SUCCESS [0.006s]
+[INFO] goods-rs .......................................... SUCCESS [0.005s]
+[INFO] goods-server ...................................... SUCCESS [0.018s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.277s
+[INFO] Finished at: Mon Jul 17 16:32:42 CST 2017
+[INFO] Final Memory: 4M/122M
+[INFO] ------------------------------------------------------------------------
