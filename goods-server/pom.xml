@@ -9,6 +9,31 @@
   <artifactId>goods-server</artifactId>
   <packaging>war</packaging>
 
+
+  <dependencies>
+  
+  <!-- 聚合的模块部分 -->
+    <dependency>
+      <groupId>com.king.demo</groupId>
+      <artifactId>goods-core</artifactId>
+      <version>${project.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.king.demo</groupId>
+      <artifactId>goods-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.king.demo</groupId>
+      <artifactId>goods-rs</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+
+    
+  </dependencies>
+<!--   
   <build>
     <plugins>
       <plugin>
@@ -19,6 +44,7 @@
         </configuration>
       </plugin>
     </plugins>
-  </build>
+  </build> 
+  -->
 
 </project>
