@@ -38,6 +38,8 @@ Test quartz
 
 可以得到如下界面
 ![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/restful-success.jpg "restful请求成功")
+
+输入<code>http://localhost:8080/goods-server/rest/core/con/func</code>
 访问restful的url的结果
 ![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/restful-result.jpg "restful请求得到的结果")
 
