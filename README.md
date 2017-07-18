@@ -37,5 +37,7 @@ Test quartz
 ##整合cxf，提供restful接口，输入<code>http://localhost:8080/goods-server/rest</code>
 
 可以得到如下界面
-![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/restful-success.jpg "restful")
+![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/restful-success.jpg "restful请求成功")
+访问restful的url的结果
+![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/restful-result.jpg "restful请求得到的结果")
 
