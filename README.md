@@ -32,3 +32,8 @@ Test quartz
 Test quartz
 
 看到"Test quartz"持续输出证明定时任务启动
+
+
+##整合cxf，提供restful接口，输入<code>http://localhost:8080/goods-server/rest</code>
+
+可以得到如下界面
