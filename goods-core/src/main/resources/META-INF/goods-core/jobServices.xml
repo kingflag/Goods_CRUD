@@ -28,7 +28,7 @@
               <property name="concurrent" value="false" />
             </bean>
           </property>
-          <property name="cronExpression" value="0/5 * * * * ? " />
+          <property name="cronExpression" value="0/59 * * * * ? " />
         </bean>
 
       </list>

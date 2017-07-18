@@ -29,8 +29,13 @@
       <artifactId>goods-rs</artifactId>
       <version>${project.version}</version>
     </dependency>
-
-
+<!-- 
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-bundle-jaxrs</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+ -->
   </dependencies>
 <!--   
   <build>
@@ -45,5 +50,5 @@
     </plugins>
   </build> 
   -->
-<build></build>
+  <build></build>
 </project>

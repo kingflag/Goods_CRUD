@@ -12,7 +12,9 @@
 		http://www.springframework.org/schema/tx/spring-tx.xsd ">
 
   <context:annotation-config />
-
+  <!-- 实现restful的引用 -->
+  <import resource="classpath:goods-rs.xml" />
+  
   <import resource="classpath:META-INF/goods-core/*.xml" />
 
 </beans>

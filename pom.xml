@@ -19,15 +19,19 @@
     <mysql.version>5.1.10</mysql.version>
     <ojdbc.version>10.2.0.1.0</ojdbc.version>
     <c3p0.version>0.9.1.2</c3p0.version>
-    <commons-dbcp.version>1.4</commons-dbcp.version>
     <quartz.version>1.6.1</quartz.version>
     <junit.version>4.10</junit.version>
     <slf4j.version>1.6.4</slf4j.version>
     <log4j.version>1.2.16</log4j.version>
-    <commons-lang3.version>3.1</commons-lang3.version>
     <flexjson.version>3.3</flexjson.version>
+    <jackson.version>1.9.11</jackson.version>
+    <jackson2.version>2.6.2</jackson2.version>
     <commons-net.version>1.4.1</commons-net.version>
+    <commons-dbcp.version>1.4</commons-dbcp.version>
+    <commons-lang3.version>3.1</commons-lang3.version>
     <maven-resources-plugin.version>2.4.3</maven-resources-plugin.version>
+    <org.jackson-version>2.5.4</org.jackson-version>
+    <cxf-bundle-jaxrs.version>2.7.10</cxf-bundle-jaxrs.version>
   </properties>
 
   <dependencyManagement>
@@ -170,8 +174,69 @@
         <version>${junit.version}</version>
       </dependency>
 
+     <!-- cxf -->
+      <dependency>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-bundle-jaxrs</artifactId>
+        <version>${cxf-bundle-jaxrs.version}</version>
+      </dependency>
 
+      <dependency>
+        <groupId>javax.ws.rs</groupId>
+        <artifactId>javax.ws.rs-api</artifactId>
+        <version>2.0</version>
+      </dependency>
 
+             
+      <dependency>
+        <groupId>com.fasterxml.jackson.jaxrs</groupId>
+        <artifactId>jackson-jaxrs-json-provider</artifactId>
+        <version>${org.jackson-version}</version>
+      </dependency> 
+      
+      <!-- json -->
+<!--       
+      <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-jaxrs</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-core-asl</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-xc</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>${jackson2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>${jackson2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${jackson2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>net.sf.flexjson</groupId>
+        <artifactId>flexjson</artifactId>
+        <version>${flexjson.version}</version>
+      </dependency>
+ -->
     </dependencies>
   </dependencyManagement>
 </project>
