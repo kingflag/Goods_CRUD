@@ -43,3 +43,6 @@ Test quartz
 访问restful的url的结果
 ![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/restful-result.jpg "restful请求得到的结果")
 
+集成JPA之后，可在输出台看到数据库信息和插入数据的显示
+![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/JPA-info.jpg "jpa集成成功后可以看到的图片")
+
