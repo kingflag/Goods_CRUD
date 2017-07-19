@@ -10,7 +10,7 @@ public class RestJobApiImpl implements RestJobApi {
   @Override
   public String test() throws Exception {
     List<String> result = new ArrayList<String>();
-    result.add("lov");
+    result.add("love");
     result.add("china");
     return result.toString();
   }

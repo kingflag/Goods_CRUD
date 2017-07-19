@@ -14,7 +14,51 @@
   <context:annotation-config />
   <!-- 实现restful的引用 -->
   <import resource="classpath:goods-rs.xml" />
-  
+
   <import resource="classpath:META-INF/goods-core/*.xml" />
+
+  <context:property-placeholder location="classpath:goods-core.properties" />
+
+  <!-- 数据源 -->
+  <bean id="goods-core.dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+    destroy-method="close">
+    <property name="driverClassName"
+      value="${goods-core.dataSource.driverClassName:com.mysql.jdbc.Driver}" />
+    <property name="url"
+      value="${goods-core.dataSource.url:jdbc:mysql://localhost:3306/testgoods}" />
+    <property name="username" value="${goods-core.dataSource.username:root}" />
+    <property name="password" value="${goods-core.dataSource.password:root}" />
+    <property name="initialSize" value="${goods-core.dataSource.initialSize:0}" />
+    <property name="maxActive" value="${goods-core.dataSource.maxActive:8}" />
+    <property name="maxWait" value="${goods-core.dataSource.maxWait:-1}" />
+  </bean>
+
+
+  <!-- 配置EntityManagerFactory -->
+  <bean id="goods-core.emf"
+    class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <property name="dataSource" ref="goods-core.dataSource" />
+    <property name="persistenceXmlLocation"
+      value="classpath:META-INF/goods-core.persistence.xml" />
+    <property name="persistenceUnitName" value="goods-core.persistent-unit" />
+    <property name="jpaVendorAdapter" ref="goods-core.jpaAdapter" />
+  </bean>
+
+  <bean id="goods-core.jpaAdapter"
+    class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+    <property name="showSql" value="true" />
+    <property name="generateDdl" value="true" />
+    <property name="databasePlatform"
+      value="${goods-core.dataSource.databasePlatform:org.hibernate.dialect.MySQL5InnoDBDialect}" />
+  </bean>
+
+
+  <bean id="goods-core.jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+    <property name="dataSource" ref="goods-core.dataSource" />
+  </bean>
+
+  <bean id="goodsOperateDaoImpl" class="com.king.demo.goods.data.dao.impl.GoodsOperateDaoImpl">
+    <property name="dataSource" ref="goods-core.dataSource"></property>
+  </bean>
 
 </beans>
