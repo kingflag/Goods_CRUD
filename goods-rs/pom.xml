@@ -26,8 +26,8 @@
       <artifactId>cxf-rt-frontend-jaxws</artifactId>
       <exclusions>
         <exclusion>
-           <groupId>asm</groupId>
-            <artifactId>asm</artifactId>
+          <groupId>asm</groupId>
+          <artifactId>asm</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -45,7 +45,12 @@
     </dependency>  
     <!-- no declaration can be found for element 'jaxrs:server' -->
     <!-- restful web service end -->
-
+    
+    <!-- 解析客户端请求的json数据 ，可解决服务端返回415的问题-->
+    <dependency>
+      <groupId>com.fasterxml.jackson.jaxrs</groupId>
+      <artifactId>jackson-jaxrs-json-provider</artifactId>
+    </dependency>
 
   </dependencies>
   <build />

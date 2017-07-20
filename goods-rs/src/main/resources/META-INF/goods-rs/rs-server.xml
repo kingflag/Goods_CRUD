@@ -22,17 +22,18 @@
 
   <jaxrs:server id="services" address="/core">
 
+    <!-- 对外开放的RESTFul接口 -->
     <jaxrs:serviceBeans>
       <bean id="testbaen" class="com.king.demo.goods.rs.server.RestJobApiImpl" />
       <bean id="rsgoodshandle" class="com.king.demo.goods.rs.server.RsGoodsHandleImpl">
         <property name="goodsOperateController" ref="goodsOperateControllerImpl" />
       </bean>
     </jaxrs:serviceBeans>
-<!-- 
+    <!-- 接收客户端的参数并解析 -->
     <jaxrs:providers>
       <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
     </jaxrs:providers>
- -->
+
   </jaxrs:server>
 
 

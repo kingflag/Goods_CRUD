@@ -38,4 +38,10 @@ public class GoodsOperateControllerImpl implements IApiGoodsOperateController {
     result.add("china");
     return result.toString();
   }
+  public String update() throws Exception{
+    List<String> result = new ArrayList<String>();
+    result.add("controller update");
+    result.add("china");
+    return result.toString();
+  }
 }

@@ -46,3 +46,7 @@ Test quartz
 集成JPA之后，可在输出台看到数据库信息和插入数据的显示
 ![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/JPA-info.jpg "jpa集成成功后可以看到的图片")
 
+实现RS层与core层的数据交互
+访问<code>http://localhost:8080/goods-server/rest/core/goodshandle/querybyid/12</code>
+![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/rs-core.jpg "实现RS层与core层的数据交互")
+

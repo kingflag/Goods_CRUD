@@ -36,6 +36,7 @@
     <hibernate-entitymanager.version>3.2.1.ga</hibernate-entitymanager.version>
     <hibernate-jpa-2.0-api.version>1.0.1.Final</hibernate-jpa-2.0-api.version>
     <javassist.version>3.6.0.GA</javassist.version>
+
   </properties>
 
   <dependencyManagement>
@@ -211,7 +212,7 @@
 
     
       <!-- hibernate -->
-     
+
       <dependency>
         <groupId>javassist</groupId>
         <artifactId>javassist</artifactId>
@@ -244,14 +245,13 @@
         <version>${hibernate-jpa-2.0-api.version}</version>
       </dependency>
 
-
-<!--             
+           
       <dependency>
         <groupId>com.fasterxml.jackson.jaxrs</groupId>
         <artifactId>jackson-jaxrs-json-provider</artifactId>
         <version>${org.jackson-version}</version>
       </dependency> 
- -->
+
 
     </dependencies>
   </dependencyManagement>

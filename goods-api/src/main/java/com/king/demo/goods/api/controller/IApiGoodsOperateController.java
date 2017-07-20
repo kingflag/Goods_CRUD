@@ -10,4 +10,5 @@ public interface IApiGoodsOperateController {
 
   public String delete() throws Exception;
 
+  public String update() throws Exception;
 }
