@@ -14,10 +14,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import com.king.demo.goods.data.dao.GoodsOperateDao;
+import com.king.demo.goods.data.dao.IGoodsOperateDao;
 import com.king.demo.goods.data.domain.Goods;
 
-public class GoodsOperateDaoImpl implements GoodsOperateDao, ApplicationContextAware {
+public class GoodsOperateDaoImpl implements IGoodsOperateDao, ApplicationContextAware {
 
   protected ApplicationContext appCtx;
 
@@ -56,15 +56,15 @@ public class GoodsOperateDaoImpl implements GoodsOperateDao, ApplicationContextA
       goods.setGid(232);
       goods.setCode("test(((00");
       goods.setName("myname");
-      goods.setRtlprc( new BigDecimal(Double.toString(69.48)));
+      goods.setRtlprc(new BigDecimal(Double.toString(69.48)));
       goods.setLastmodifytime(new Date());
       goods.setState("lllll");
       em.getTransaction().begin();
       goods = em.merge(goods);
       em.flush();
       em.getTransaction().commit();
-      //return goods; 
-      System.out.println("goods:"+goods);
+      // return goods;
+      System.out.println("goods:" + goods);
       System.out.println("7878");
       DatabaseMetaData md = this.jdbcTemplate.getDataSource().getConnection().getMetaData();
       System.out.println(md.getDatabaseProductName());
