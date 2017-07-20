@@ -10,7 +10,8 @@
 
   <bean id="goods-core.testJob" class="com.king.demo.goods.corejob.TestJob" />
 
-
+  <!-- 将controller注册为bean -->
+  <bean id="goodsOperateControllerImpl" class="com.king.demo.goods.data.controller.impl.GoodsOperateControllerImpl"></bean>
 
   <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
     <property name="triggers">

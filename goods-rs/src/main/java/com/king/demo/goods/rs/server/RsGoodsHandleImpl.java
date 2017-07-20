@@ -3,40 +3,44 @@ package com.king.demo.goods.rs.server;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.king.demo.goods.api.controller.IApiGoodsOperateController;
 import com.king.demo.goods.rs.service.IRsGoodsHandle;
 
 public class RsGoodsHandleImpl implements IRsGoodsHandle {
 
+  private IApiGoodsOperateController goodsOperateController;
+
+  public IApiGoodsOperateController  getgoodsOperateController() {
+    return goodsOperateController;
+  }
+
+  public void setgoodsOperateController(IApiGoodsOperateController goodsOperateController) {
+    this.goodsOperateController = goodsOperateController;
+  }
+
+  
   @Override
   public String queryall() throws Exception {
-    List<String> result = new ArrayList<String>();
-    result.add("queryall");
-    result.add("china");
-    return result.toString();
+    String result = goodsOperateController.queryall();
+    return result;
   }
 
   @Override
   public String querybyid() throws Exception {
-    List<String> result = new ArrayList<String>();
-    result.add("querybyid");
-    result.add("china");
-    return result.toString();
+    String result = goodsOperateController.querybyid();
+    return result;
   }
 
   @Override
   public String add() throws Exception {
-    List<String> result = new ArrayList<String>();
-    result.add("add");
-    result.add("china");
-    return result.toString();
+    String result = goodsOperateController.add();
+    return result;
   }
 
   @Override
   public String delete() throws Exception {
-    List<String> result = new ArrayList<String>();
-    result.add("delete");
-    result.add("china");
-    return result.toString();
+    String result = goodsOperateController.delete();
+    return result;
   }
 
 }

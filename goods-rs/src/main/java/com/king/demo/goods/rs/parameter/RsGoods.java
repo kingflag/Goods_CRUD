@@ -1,30 +1,10 @@
-package com.king.demo.goods.data.domain;
+package com.king.demo.goods.rs.parameter;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
-
-@Entity
-@Table(name = Goods.TABLE_NAME)
-@org.hibernate.annotations.Table(appliesTo = Goods.TABLE_NAME)
-public class Goods implements Serializable {
-
-  /**
-   * 
-   */
-  private static final long serialVersionUID = 1L;
-
-  /** 数据库表名称。 */
-  public static final String TABLE_NAME = "KINGTESTGOODS";
-
+public class RsGoods {
   private String uuid; // 逻辑主键
   private Integer gid; // 业务主键 通过序列来生成
   private String code; // 商品代码
@@ -33,13 +13,6 @@ public class Goods implements Serializable {
   private Date lastmodifytime; // 商品最后修改时间
   private String state; // 商品状态
 
-  /**
-   * 唯一标识 | 不能为空 | PK。
-   */
-  @Id
-  @Column(name = "uuid", length = 64, nullable = false)
-  @GeneratedValue(generator = "system-uuid")
-  @GenericGenerator(name = "system-uuid", strategy = "uuid")
   public String getUuid() {
     return uuid;
   }
@@ -48,7 +21,6 @@ public class Goods implements Serializable {
     this.uuid = uuid;
   }
 
-  @Column(name = "gid")
   public Integer getGid() {
     return gid;
   }
@@ -57,7 +29,6 @@ public class Goods implements Serializable {
     this.gid = gid;
   }
 
-  @Column(name = "code")
   public String getCode() {
     return code;
   }
@@ -66,7 +37,6 @@ public class Goods implements Serializable {
     this.code = code;
   }
 
-  @Column(name = "name")
   public String getName() {
     return name;
   }
@@ -75,7 +45,6 @@ public class Goods implements Serializable {
     this.name = name;
   }
 
-  @Column(name = "rtlprc")
   public BigDecimal getRtlprc() {
     return rtlprc;
   }
@@ -84,7 +53,6 @@ public class Goods implements Serializable {
     this.rtlprc = rtlprc;
   }
 
-  @Column(name = "lastmodifytime")
   public Date getLastmodifytime() {
     return lastmodifytime;
   }
@@ -93,7 +61,6 @@ public class Goods implements Serializable {
     this.lastmodifytime = lastmodifytime;
   }
 
-  @Column(name = "state")
   public String getState() {
     return state;
   }
@@ -104,7 +71,7 @@ public class Goods implements Serializable {
 
   @Override
   public String toString() {
-    return "Goods [uuid=" + uuid + ", gid=" + gid + ", code=" + code + ", name=" + name
+    return "RsGoods [uuid=" + uuid + ", gid=" + gid + ", code=" + code + ", name=" + name
         + ", rtlprc=" + rtlprc + ", lastmodifytime=" + lastmodifytime + ", state=" + state + "]";
   }
 

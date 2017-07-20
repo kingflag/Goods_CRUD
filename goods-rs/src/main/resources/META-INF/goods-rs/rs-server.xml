@@ -24,7 +24,9 @@
 
     <jaxrs:serviceBeans>
       <bean id="testbaen" class="com.king.demo.goods.rs.server.RestJobApiImpl" />
-      <bean id="rsgoodshandle" class="com.king.demo.goods.rs.server.RsGoodsHandleImpl" />
+      <bean id="rsgoodshandle" class="com.king.demo.goods.rs.server.RsGoodsHandleImpl">
+        <property name="goodsOperateController" ref="goodsOperateControllerImpl" />
+      </bean>
     </jaxrs:serviceBeans>
 <!-- 
     <jaxrs:providers>
