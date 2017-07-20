@@ -44,7 +44,7 @@
               <property name="concurrent" value="false" />
             </bean>
           </property>
-          <property name="cronExpression" value="0,10,20,30,40,50 * * * * ? *" />
+          <property name="cronExpression" value="0 0/7 * * * ? *" />
         </bean>
 
       </list>

@@ -23,15 +23,14 @@
   <jaxrs:server id="services" address="/core">
 
     <jaxrs:serviceBeans>
-      <bean id="testbaen" class="com.king.demo.goods.rs.server.RestJobApiImpl">
-
-      </bean>
+      <bean id="testbaen" class="com.king.demo.goods.rs.server.RestJobApiImpl" />
+      <bean id="rsgoodshandle" class="com.king.demo.goods.rs.server.RsGoodsHandleImpl" />
     </jaxrs:serviceBeans>
 <!-- 
     <jaxrs:providers>
       <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
     </jaxrs:providers>
- -->    
+ -->
   </jaxrs:server>
 
 
