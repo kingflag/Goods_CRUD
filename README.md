@@ -79,6 +79,6 @@ Test quartz
 请求头：
 ![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/http请求头.jpg "请求头")
 请求体：
-![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/http请求头.jp "请求体")
+![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/http请求头.jpg "请求体")
 
 其他请求类似，一定要选对请求方式
