@@ -88,13 +88,14 @@ Test quartz
 
 <code>
 DROP PROCEDURE IF EXISTS `Goods_state_update`;  
-CREATE PROCEDURE Goods_state_update(IN NAME VARCHAR(50))  
+CREATE PROCEDURE Goods_state_update(IN ID VARCHAR(50))  
 BEGIN
-     SET @NAME = NAME;
+     SET @ID = ID;
      SET @updateSql = CONCAT('UPDATE kingtestgoods SET state = \'checked\' WHERE uuid =(?)');
      PREPARE stmtinsert FROM @updateSql;
-     EXECUTE stmtinsert USING @NAME;
+     EXECUTE stmtinsert USING @ID;
      DEALLOCATE PREPARE stmtinsert;
+     select * from kingtestgoods where uuid=ID;
 END;
-CALL Goods_state_update('2c9184945d641d81015d641f020b0003');
+CALL Goods_state_update('2c9184945d64cd70015d64cddfc20001');
 </code>
