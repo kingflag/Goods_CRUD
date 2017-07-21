@@ -18,4 +18,6 @@ public interface IGoodsOperateDao {
 
   public Goods update(Goods goods);
   
+  public Goods check(String id);
+  
 }

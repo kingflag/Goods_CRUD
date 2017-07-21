@@ -185,4 +185,30 @@ public class GoodsOperateDaoImpl implements IGoodsOperateDao, ApplicationContext
     return null;
   }
 
+  @Override
+  public Goods check(String id) {
+    System.out.println("check:" + id);
+    logger.debug("enter update");
+    Goods goods = new Goods();
+    EntityManager em = createEntityManager();
+    try {
+      goods = querybyid(id);
+      if (goods == null) {
+        logger.info("不存在此对象");
+      } else {
+        em.getTransaction().begin();
+        Query query = em.createNativeQuery("{call Goods_state_update(?)}", Goods.class);
+        query.setParameter("id", id);
+        Goods result = (Goods) query.getSingleResult();
+      }
+      em.clear();
+    } catch (Exception e) {
+      e.printStackTrace();
+    } finally {
+      em.close();
+    }
+
+    return goods;
+  }
+
 }

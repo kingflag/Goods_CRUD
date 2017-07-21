@@ -37,4 +37,8 @@ public interface IRsGoodsHandle {
   @Path(value = "/update")
   public String update(RsGoods goods) throws Exception;
 
+  @POST
+  @Path(value = "/check/{id}")
+  public String check(@PathParam("id") String id) throws Exception;
+
 }

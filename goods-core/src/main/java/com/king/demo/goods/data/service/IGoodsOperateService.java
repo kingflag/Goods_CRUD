@@ -13,4 +13,6 @@ public interface IGoodsOperateService {
   public String delete(String id);
 
   public String update(Goods goods);
+  
+  public String check(String id);
 }

@@ -57,4 +57,10 @@ public class GoodsOperateControllerImpl implements IApiGoodsOperateController {
     String result = goodsOperateServiceImpl.update(cgoods);
     return result;
   }
+
+  @Override
+  public String check(String id) throws Exception {
+    String result = goodsOperateServiceImpl.check(id);
+    return result;
+  }
 }

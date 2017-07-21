@@ -92,4 +92,17 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
     return resultJson;
   }
 
+  @Override
+  public String check(String id) {
+    Goods good = new Goods();
+    good = goodsOperateDaoImpl.check(id);
+    logger.info("good:" + good);
+    Map<String, Object> result = new HashMap<String, Object>();
+    result.put("state", "200");
+    result.put("data", "querybyid");
+    result.put("good", good);
+    String resultJson = mapToJson(result);
+    return resultJson;
+  }
+
 }

@@ -1,8 +1,5 @@
 package com.king.demo.goods.rs.server;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 import com.king.demo.goods.api.controller.IApiGoodsOperateController;
 import com.king.demo.goods.api.parameter.ApiGoods;
 import com.king.demo.goods.rs.parameter.RsGoods;
@@ -67,6 +64,12 @@ public class RsGoodsHandleImpl implements IRsGoodsHandle {
     newgoods.setLastmodifytime(goods.getLastmodifytime()); // 商品最后修改时间
     newgoods.setState(goods.getState()); // 商品状态
     String result = goodsOperateController.update(newgoods);
+    return result;
+  }
+
+  @Override
+  public String check(String id) throws Exception {
+    String result = goodsOperateController.check(id);
     return result;
   }
 
