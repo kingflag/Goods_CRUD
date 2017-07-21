@@ -36,7 +36,7 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
     result.put("state", "200");
     result.put("data", "queryall");
     result.put("goods", goods);
-    String resultJson = this.mapToJson(result);
+    String resultJson = mapToJson(result);
     return resultJson;
   }
 
@@ -50,7 +50,7 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
     result.put("state", "200");
     result.put("data", "querybyid");
     result.put("good", good);
-    String resultJson = this.mapToJson(result);
+    String resultJson = mapToJson(result);
     return resultJson;
   }
 
@@ -63,7 +63,7 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
     result.put("state", "200");
     result.put("data", "add");
     result.put("good", good);
-    String resultJson = this.mapToJson(result);
+    String resultJson = mapToJson(result);
     return resultJson;
   }
 
@@ -75,7 +75,7 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
     result.put("state", "200");
     result.put("data", "delete");
     result.put("removeId", removeId);
-    String resultJson = this.mapToJson(result);
+    String resultJson = mapToJson(result);
     return resultJson;
   }
 
@@ -88,7 +88,7 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
     result.put("state", "200");
     result.put("data", "update");
     result.put("good", good);
-    String resultJson = this.mapToJson(result);
+    String resultJson = mapToJson(result);
     return resultJson;
   }
 
