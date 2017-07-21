@@ -82,3 +82,19 @@ Test quartz
 ![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/http请求体.jpg "请求体")
 
 其他请求类似，一定要选对请求方式
+
+在mysql的testgoods数据库中创见存储过程
+<code>
+	DROP PROCEDURE IF EXISTS `Goods_state_update`;  
+CREATE PROCEDURE Goods_state_update(IN NAME VARCHAR(50))  
+BEGIN   
+     SET @NAME = NAME;
+       
+     SET @updateSql = CONCAT('UPDATE kingtestgoods SET state = \'check1\' WHERE uuid =(?)');  
+     PREPARE stmtinsert FROM @updateSql;  
+     EXECUTE stmtinsert USING @NAME;  
+     DEALLOCATE PREPARE stmtinsert;  
+END;  
+  
+CALL Goods_state_update('2c9184945d641d81015d641f020b0003');
+</code>
