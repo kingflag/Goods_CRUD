@@ -57,6 +57,12 @@
     <property name="dataSource" ref="goods-core.dataSource" />
   </bean>
 
+  <bean id="goodsOperateControllerImpl"
+    class="com.king.demo.goods.data.controller.impl.GoodsOperateControllerImpl" />
+
+  <bean id="goodsOperateServiceImpl"
+    class="com.king.demo.goods.data.service.impl.GoodsOperateServiceImpl" />
+
   <bean id="goodsOperateDaoImpl" class="com.king.demo.goods.data.dao.impl.GoodsOperateDaoImpl">
     <property name="dataSource" ref="goods-core.dataSource"></property>
   </bean>
