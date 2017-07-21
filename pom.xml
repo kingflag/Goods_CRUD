@@ -36,7 +36,7 @@
     <hibernate-entitymanager.version>3.2.1.ga</hibernate-entitymanager.version>
     <hibernate-jpa-2.0-api.version>1.0.1.Final</hibernate-jpa-2.0-api.version>
     <javassist.version>3.6.0.GA</javassist.version>
-
+    <gson.version>2.4</gson.version>
   </properties>
 
   <dependencyManagement>
@@ -82,10 +82,12 @@
         <artifactId>slf4j-log4j12</artifactId>
         <version>${slf4j.version}</version>
       </dependency>
+
+    <!-- Gson -->
       <dependency>
-        <groupId>net.sf.flexjson</groupId>
-        <artifactId>flexjson</artifactId>
-        <version>${flexjson.version}</version>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>${gson.version}</version>
       </dependency>
 
       <dependency>
@@ -245,12 +247,12 @@
         <version>${hibernate-jpa-2.0-api.version}</version>
       </dependency>
 
-           
+
       <dependency>
         <groupId>com.fasterxml.jackson.jaxrs</groupId>
         <artifactId>jackson-jaxrs-json-provider</artifactId>
         <version>${org.jackson-version}</version>
-      </dependency> 
+      </dependency>
 
 
     </dependencies>

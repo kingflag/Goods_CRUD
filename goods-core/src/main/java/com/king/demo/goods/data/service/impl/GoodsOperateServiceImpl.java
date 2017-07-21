@@ -8,6 +8,7 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.google.gson.Gson;
 import com.king.demo.goods.data.dao.IGoodsOperateDao;
 import com.king.demo.goods.data.domain.Goods;
 import com.king.demo.goods.data.service.IGoodsOperateService;
@@ -19,6 +20,12 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
   @Autowired
   private IGoodsOperateDao goodsOperateDaoImpl;
 
+  public static <T> String mapToJson(Map<String, T> map) {
+    Gson gson = new Gson();
+    String jsonStr = gson.toJson(map);
+    return jsonStr;
+  }
+
   @Override
   public String queryall() {
     System.out.println("进入service：queryall");
@@ -29,7 +36,8 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
     result.put("state", "200");
     result.put("data", "queryall");
     result.put("goods", goods);
-    return result.toString();
+    String resultJson = this.mapToJson(result);
+    return resultJson;
   }
 
   @Override
@@ -42,7 +50,8 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
     result.put("state", "200");
     result.put("data", "querybyid");
     result.put("good", good);
-    return result.toString();
+    String resultJson = this.mapToJson(result);
+    return resultJson;
   }
 
   @Override
@@ -54,7 +63,8 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
     result.put("state", "200");
     result.put("data", "add");
     result.put("good", good);
-    return result.toString();
+    String resultJson = this.mapToJson(result);
+    return resultJson;
   }
 
   @Override
@@ -65,7 +75,8 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
     result.put("state", "200");
     result.put("data", "delete");
     result.put("removeId", removeId);
-    return result.toString();
+    String resultJson = this.mapToJson(result);
+    return resultJson;
   }
 
   @Override
@@ -77,7 +88,8 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
     result.put("state", "200");
     result.put("data", "update");
     result.put("good", good);
-    return result.toString();
+    String resultJson = this.mapToJson(result);
+    return resultJson;
   }
 
 }
