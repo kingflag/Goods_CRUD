@@ -119,3 +119,6 @@ END;
 CALL Goods_state_update('2c9184945d64cd70015d64cddfc20001');
 
 </code>
+
+调用存储过程的地址为<code>http://localhost:8080/goods-server/rest/core/goodshandle/check/<b>uuid</b></code>
+请求方式为POST，注意正确的uuid
