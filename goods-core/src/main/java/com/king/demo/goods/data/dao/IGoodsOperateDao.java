@@ -20,4 +20,5 @@ public interface IGoodsOperateDao {
   
   public Goods check(String id);
   
+  
 }

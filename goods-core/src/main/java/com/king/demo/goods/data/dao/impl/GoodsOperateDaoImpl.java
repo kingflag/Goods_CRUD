@@ -1,5 +1,7 @@
 package com.king.demo.goods.data.dao.impl;
 
+import java.io.FileOutputStream;
+import java.io.RandomAccessFile;
 import java.math.BigDecimal;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
@@ -197,7 +199,7 @@ public class GoodsOperateDaoImpl implements IGoodsOperateDao, ApplicationContext
         logger.info("不存在此对象");
       } else {
         em.getTransaction().begin();
-        logger.info("取得id:"+id);
+        logger.info("取得id:" + id);
         Query query = em.createNativeQuery("{call Goods_state_update(?)}");
         query.setParameter(1, id);
         query.executeUpdate();
@@ -212,6 +214,27 @@ public class GoodsOperateDaoImpl implements IGoodsOperateDao, ApplicationContext
     }
 
     return goods;
+  }
+
+  public String backup() throws Exception {
+    RandomAccessFile mm = null;
+
+    FileOutputStream o = null;
+    String content = this.queryall().toString();
+    try {
+      String filename = "backup" + System.currentTimeMillis();
+      logger.info("文件名字:"+filename);
+      o = new FileOutputStream(filename);
+      o.write(content.getBytes("UTF-8"));
+      o.close();
+    } catch (Exception e) {
+      e.printStackTrace();
+    } finally {
+      if (mm != null) {
+        mm.close();
+      }
+    }
+    return content;
   }
 
 }

@@ -40,12 +40,15 @@
                 <ref bean="goodsOperateDaoImpl" />
               </property>
               <property name="targetMethod">
-                <value>test</value>
+                <!-- <value>test</value> -->
+                <value>backup</value>
               </property>
               <property name="concurrent" value="false" />
             </bean>
           </property>
-          <property name="cronExpression" value="0 0/7 * * * ? *" />
+          <!-- <property name="cronExpression" value="0 0/1 * * * ? *" /> -->
+          <property name="cronExpression" value="0 0 0/1 * * ?" />
+           
         </bean>
 
       </list>
