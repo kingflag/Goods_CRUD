@@ -61,7 +61,7 @@ public class HTTPUtils {
       httpPost.setUseCaches(false);
       httpPost.setConnectTimeout(CONNECT_TIMEOUT);
       httpPost.setReadTimeout(READ_TIMEOUT);
-      httpPost.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+      httpPost.setRequestProperty("Content-Type", "application/json");
       httpPost.connect();
       out = httpPost.getOutputStream();
       out.write(param.getBytes(charset));
@@ -128,7 +128,7 @@ public class HTTPUtils {
       httpPost.setUseCaches(false);
       httpPost.setConnectTimeout(CONNECT_TIMEOUT);
       httpPost.setReadTimeout(READ_TIMEOUT);
-      httpPost.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+      httpPost.setRequestProperty("Content-Type", "application/json");
       httpPost.connect();
       out = httpPost.getOutputStream();
       out.write(param.getBytes(charset));
