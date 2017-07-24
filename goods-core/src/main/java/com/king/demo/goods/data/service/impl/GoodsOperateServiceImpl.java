@@ -99,7 +99,7 @@ public class GoodsOperateServiceImpl implements IGoodsOperateService {
     logger.info("good:" + good);
     Map<String, Object> result = new HashMap<String, Object>();
     result.put("state", "200");
-    result.put("data", "querybyid");
+    result.put("data", "check");
     result.put("good", good);
     String resultJson = mapToJson(result);
     return resultJson;

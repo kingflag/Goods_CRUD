@@ -197,10 +197,13 @@ public class GoodsOperateDaoImpl implements IGoodsOperateDao, ApplicationContext
         logger.info("不存在此对象");
       } else {
         em.getTransaction().begin();
-        Query query = em.createNativeQuery("{call Goods_state_update(?)}", Goods.class);
-        query.setParameter("id", id);
-        Goods result = (Goods) query.getSingleResult();
+        logger.info("取得id:"+id);
+        Query query = em.createNativeQuery("{call Goods_state_update(?)}");
+        query.setParameter(1, id);
+        query.executeUpdate();
+        logger.info("调用存储过程：" + query);
       }
+      em.getTransaction().commit();
       em.clear();
     } catch (Exception e) {
       e.printStackTrace();

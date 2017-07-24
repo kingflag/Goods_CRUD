@@ -87,15 +87,35 @@ Test quartz
 
 
 <code>
-DROP PROCEDURE IF EXISTS `Goods_state_update`;  
-CREATE PROCEDURE Goods_state_update(IN ID VARCHAR(50))  
+##show procedure status
+
+DROP PROCEDURE
+
+IF EXISTS `Goods_state_update`;
+
+CREATE PROCEDURE Goods_state_update (IN ID VARCHAR(50))
+
 BEGIN
-     SET @ID = ID;
-     SET @updateSql = CONCAT('UPDATE kingtestgoods SET state = \'checked\' WHERE uuid =(?)');
-     PREPARE stmtinsert FROM @updateSql;
-     EXECUTE stmtinsert USING @ID;
-     DEALLOCATE PREPARE stmtinsert;
-     select * from kingtestgoods where uuid=ID;
+
+SET @ID = ID;
+
+SET @updateSql = CONCAT(
+
+	'UPDATE kingtestgoods SET state = \'checked\' WHERE uuid =(?)'
+);
+
+PREPARE stmtinsert
+
+FROM
+
+	@updateSql;
+
+EXECUTE stmtinsert USING @ID;
+
+DEALLOCATE PREPARE stmtinsert;
+
 END;
+
 CALL Goods_state_update('2c9184945d64cd70015d64cddfc20001');
+
 </code>
