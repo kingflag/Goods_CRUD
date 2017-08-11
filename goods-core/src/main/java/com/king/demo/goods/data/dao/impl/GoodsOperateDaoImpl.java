@@ -20,6 +20,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import com.google.gson.Gson;
 import com.king.demo.goods.data.dao.IGoodsOperateDao;
 import com.king.demo.goods.data.domain.Goods;
 
@@ -217,13 +218,13 @@ public class GoodsOperateDaoImpl implements IGoodsOperateDao, ApplicationContext
   }
 
   public String backup() throws Exception {
+    Gson gson = new Gson();
     RandomAccessFile mm = null;
-
     FileOutputStream o = null;
-    String content = this.queryall().toString();
+    String content = gson.toJson(this.queryall()).toString();
     try {
       String filename = "backup" + System.currentTimeMillis();
-      logger.info("文件名字:"+filename);
+      logger.info("文件名字:" + filename);
       o = new FileOutputStream(filename);
       o.write(content.getBytes("UTF-8"));
       o.close();
