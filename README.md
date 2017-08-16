@@ -64,7 +64,8 @@ Test quartz
 添加操作时，访问：<code>http://localhost:8080/goods-server/rest/core/goodshandle/add</code>,使用POST的方式，
 请求头添加<code>Content-Type=application/json</code>
 请求体添加
-<code>
+
+```javascript
 	{
 	"uuid":"2333333",
 	"gid":566,
@@ -74,7 +75,8 @@ Test quartz
 	"lastmodifytime":"2001-07-04T12:08:56.235-0700",
 	"state":"trt"
 }
-</code>
+```
+
 如下图
 请求头：
 ![alt text](https://github.com/kingflag/Goods_CRUD/blob/master/src/site/http请求头.jpg "请求头")
@@ -86,39 +88,24 @@ Test quartz
 ##在mysql的testgoods数据库中创建存储过程
 
 
-<code>
+```javascript
 ##show procedure status
-
 DROP PROCEDURE
-
 IF EXISTS `Goods_state_update`;
-
 CREATE PROCEDURE Goods_state_update (IN ID VARCHAR(50))
-
 BEGIN
-
 SET @ID = ID;
-
 SET @updateSql = CONCAT(
-
 	'UPDATE kingtestgoods SET state = \'checked\' WHERE uuid =(?)'
 );
-
 PREPARE stmtinsert
-
 FROM
-
 	@updateSql;
-
 EXECUTE stmtinsert USING @ID;
-
 DEALLOCATE PREPARE stmtinsert;
-
 END;
-
 CALL Goods_state_update('2c9184945d64cd70015d64cddfc20001');
-
-</code>
+```
 
 调用存储过程的地址为<code>http://localhost:8080/goods-server/rest/core/goodshandle/check/<b>uuid</b></code>
 请求方式为POST，注意正确的uuid
