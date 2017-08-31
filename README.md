@@ -21,7 +21,7 @@
 
 
 启动后可以看到
-
+```log
 ......
 beginTestJob
 2017-07-17 16:30:30,527 [localhost-startStop-1] INFO org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 456 ms
@@ -41,6 +41,7 @@ Test quartz
 2017-07-17 16:30:40,002 [org.springframework.scheduling.quartz.SchedulerFactoryBean#0_Worker-3] DEBUG org.quartz.core.JobRunShell - Calling execute on job DEFAULT.org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean#1e94e858
 Test quartz
 
+```
 看到"Test quartz"持续输出证明定时任务启动
 
 
